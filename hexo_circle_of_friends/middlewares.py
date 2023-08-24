@@ -18,6 +18,7 @@ class RandomUserAgentMiddleware:
         UA = random.choice(settings["USER_AGENT_LIST"])
         if UA:
             request.headers.setdefault('User-Agent', UA)
+            # request.headers.setdefault('Referer', 'https://moeyy.cn/fcircle/')
         return None
 
 
